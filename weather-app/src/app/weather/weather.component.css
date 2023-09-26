@@ -1,6 +1,4 @@
-/* Add this CSS to a separate styles.css or weather.component.css file */
 
-/* Set the background image for the weather-app container */
 body{
     background-image: url('../../assets/weatherpic.jpg');
 }
@@ -11,7 +9,7 @@ body{
     background-attachment: fixed; /* Adjust to your preference */
   }
   
-  /* Style for the weather table */
+
   .weather-table {
     width: 100%;
     margin-top: 20px;
@@ -20,38 +18,31 @@ body{
     padding: 15px; /* Add some padding for content */
   }
   
-  /* Style for table headers */
   .weather-table th {
     background-color: #f2f2f2;
   }
   
-  /* Style for weather rows */
   .weather-row td {
     background-color: #fff;
   }
   
-  /* Style for condition text */
   .condition {
     font-weight: bold;
   }
   
-  /* Style for search button */
   .search-button {
     margin-top: 10px;
   }
   
-  /* Style for no data message */
   .no-data-message {
     font-size: 18px;
     font-weight: bold;
   }
-  
-  /* Center align text */
+
   .text-center {
     text-align: center;
   }
-  
-  /* Responsive styles for mobile devices */
+
   @media (max-width: 768px) {
     .location-input,
     .search-button {
@@ -65,9 +56,7 @@ body{
 .card-text{
     font-size: larger;
 }
-/* weather.component.css */
 
-/* Style for the card */
 .weather-card {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -82,7 +71,6 @@ body{
     transform: translateY(-5px);
   }
   
-  /* Style for the card header */
   .weather-card-header {
     background-color: #007bff;
     color: #fff;
@@ -92,34 +80,28 @@ body{
     border-top-right-radius: 5px;
   }
   
-  /* Style for the card body */
   .weather-card-body {
     padding: 20px;
   }
-  
-  /* Style for the condition text */
+
   .weather-condition {
     font-weight: bold;
     font-size: 18px;
   }
   
-  /* Style for the temperature and humidity text */
   .weather-text {
     font-size: 16px;
   }
   
-  /* Style for the 'No Data Found' message */
   .no-data-message {
     font-size: 18px;
     font-weight: bold;
     color: red;
   }
   
-  /* Center-align text */
   .text-center {
     text-align: center;
   }
-  /* Add this CSS class to your styles.css or weather.component.css */
 
 @keyframes fadeIn {
     0% {
