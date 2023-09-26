@@ -1,0 +1,36 @@
+  <body>
+    <div class="container weather-app">
+      <h2 class="text-center">WEATHER TODAY</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <input [(ngModel)]="location" placeholder="Enter Location" class="form-control location-input" />
+            <div class="input-group-append">
+              <button (click)="searchWeather()" class="btn btn-success search-button" style="width: 200%; height: 100%; position: relative; bottom: 10px; left:10px">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  <div *ngIf="weatherData.length > 0" class="text-center">
+        <h3 class="mt-4" style="background-color: rgba(0, 0, 0,0.4); padding-top: 10px;padding-bottom: 10px; font-family: sans-serif; color: rgb(110, 220, 77);">Weather Details of Top Cities</h3>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let data of weatherData">
+        <div class="card mb-4">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title" style="color: rgb(255, 255, 255);">{{ data.location }}</h5>
+          </div>
+          <div class="card-body">
+            <img [src]="getWeatherIconUrl(data.weatherCondition)"  class="weather-icon" />
+            <p class="card-text condition">{{ data.weatherCondition }}</p>
+            <p class="card-text">Temperature: {{ data.temperature }}°C</p>
+            <p class="card-text">Humidity: {{ data.humidity }}%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="noDataFound" class="text-center mt-4">
+    <p class="no-data-message text-danger">No weather data found for the location.</p>
+  </div>
+  </div>
+  </body>
